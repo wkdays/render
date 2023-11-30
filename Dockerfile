@@ -16,4 +16,4 @@ EXPOSE 22
 
 # 启动 Shellinaboxshellinaboxd
 
-CMD ［"/usr/bin/shellinaboxd" ,"-t" ,"-s" "/:LOGIN"］
+CMD ［"shellinaboxd" ,"-t" ,"-s" "/:LOGIN"］
