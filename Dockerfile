@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y shellinabox &&  apt-get clean &&  rm -r
 
 # 设置 root 用户的密码为'roof,
 
-RUN echo'root:root'| chpasswd
+RUN echo"root:root"| chpasswd
 
 # 暴露 22 端口
 
@@ -16,4 +16,5 @@ EXPOSE 22
 
 # 启动 Shellinaboxshellinaboxd
 
-CMD ［"shellinaboxd" ,"-t" ,"-s" "/:LOGIN"］
+#CMD ［"shellinaboxd" ,"-t" ,"-s" "/:LOGIN"］
+CMD ["shellinaboxd", "-s", "/:LOGIN", "--disable-ssl"]
