@@ -4,11 +4,7 @@ FROM ubuntu:22.04
 
 # 安装 Shellinabox
 
-RUN apt-get update &&\
-
-apt-get install -y shellinabox && \ apt-get clean && \
-
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get update && apt-get install -y shellinabox &&  apt-get clean &&  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # 设置 root 用户的密码为'roof,
 
@@ -18,6 +14,6 @@ RUN echo'root:root'| chpasswd
 
 EXPOSE 22
 
-# 启动 Shellinabox
+# 启动 Shellinaboxshellinaboxd
 
-CMD ［"/usr/bin/shellinaboxd" ,"-t" ," -s" "/:LOGIN"］
+CMD ［"/usr/bin/shellinaboxd" ,"-t" ,"-s" "/:LOGIN"］
