@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y shellinabox &&  apt-get clean &&  rm -r
 
 # 设置 root 用户的密码为'roof,
 
-RUN echo"root:render123"|chpasswd
+RUN echo "root:render123" | chpasswd
 
 # 暴露 22 端口
 
